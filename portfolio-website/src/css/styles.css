@@ -1,0 +1,793 @@
+/* filepath: c:\Users\rznto\OneDrive\Desktop\mynew_fuzion\portfolio-website\src\css\styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+header .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+main {
+    padding: 2rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: #f4f4f4;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Featured Projects Section */
+.projects {
+    padding: 4rem 1rem;
+    text-align: center;
+    background: linear-gradient(135deg, #fdfcfb, #e2d1c3); /* Soft pastel gradient */
+    color: #333;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #555;
+    animation: slideInDown 1.5s ease-in-out;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideInUp 1.5s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.project-card p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.project-card .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.project-card .btn:hover {
+    background: #00d1ff;
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #333;
+    color: #fff;
+}
+
+/* Rock Paper Scissors Game Styles */
+.game {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px); /* Adds a blur effect */
+    color: #fff; /* White text for contrast */
+}
+
+/* Update the game title */
+.game h1 {
+    font-size: 2.5rem;
+    color: #f4f4f4;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Update the choices buttons */
+.choice {
+    padding: 1.5rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1); /* Transparent button background */
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+.choice:hover {
+    background: rgba(255, 255, 255, 0.2); /* Slightly brighter on hover */
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.choice:active {
+    background: rgba(255, 255, 255, 0.3); /* Brighter when clicked */
+    transform: scale(0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Click Animation */
+.choice.clicked {
+    animation: clickEffect 0.2s ease;
+}
+
+@keyframes clickEffect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Update the results section */
+.results {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: #f4f4f4;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.results span {
+    font-weight: bold;
+    color: #00d1ff; /* Bright cyan for results */
+}
+
+/* Result Highlight Animation */
+.results span.highlight {
+    animation: highlightEffect 0.5s ease;
+}
+
+@keyframes highlightEffect {
+    0% {
+        color: #00d1ff;
+        transform: scale(1);
+    }
+    50% {
+        color: #ffffff;
+        transform: scale(1.2);
+    }
+    100% {
+        color: #00d1ff;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .choice {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .results {
+        font-size: 1.2rem;
+    }
+}
+
+/* RSS Reader Styles */
+.rss-reader {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.rss-feed {
+    margin-top: 2rem;
+    text-align: left;
+    max-width: 800px;
+    margin: 2rem auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.rss-feed h2 {
+    font-size: 1.5rem;
+    color: #00d1ff;
+}
+
+.rss-feed p {
+    color: #f4f4f4;
+    margin-bottom: 1rem;
+}
+
+.rss-feed a {
+    color: #00d1ff;
+    text-decoration: none;
+}
+
+.rss-feed a:hover {
+    text-decoration: underline;
+}
+
+/* RSS Reader Buttons */
+.rss-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.rss-buttons button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.rss-buttons button:hover {
+    background: #555;
+    transform: scale(1.05);
+}
+
+.rss-buttons button:active {
+    background: #777;
+    transform: scale(0.95);
+}
+
+/* General Reset */
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #333;
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #323a3c;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(135deg, #ebe6f0, #99999f);
+    color: #fff;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: slideInFromLeft 1.5s ease-out;
+}
+
+.hero-description {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    animation: slideInFromRight 1.5s ease-out;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #343839;
+    color: #f2ecec;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.hero-btn:hover {
+    background: #4e4444;
+    color: #a3b2b4;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+}
+
+/* About Section */
+.about {
+    padding: 4rem 1rem;
+    text-align: center;
+    background: #f9f9f9;
+    color: #333;
+}
+
+.about-description {
+    font-size: 1.2rem;
+    margin: 1rem auto;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.about-image {
+    margin-top: 2rem;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure the footer stays at the bottom */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+    margin: 0;
+}
+
+main {
+    flex: 1; /* Pushes the footer to the bottom */
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Center the game section */
+.game {
+    text-align: center;
+    padding: 2rem;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f4f4f4;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 100px;
+    height: 120px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.choice:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.choice i {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    animation: bounce 1s infinite;
+}
+
+.choice span {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Results Section */
+.results {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #333;
+    color: #fff;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #b2d3db;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #333;
+    color: #fff;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00d1ff;
+}
+
+/* Contact Section */
+.contact {
+    padding: 4rem 1rem;
+    text-align: center;
+    background: #f9f9f9;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.contact-description {
+    font-size: 1.2rem;
+    margin: 1rem auto;
+    max-width: 600px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.contact-form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form button {
+    padding: 0.8rem 1.5rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+    background: #00d1ff;
+    transform: scale(1.05);
+}
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Skills Section */
+.skills {
+    padding: 4rem 1rem;
+    text-align: center;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Fun gradient background */
+    color: #fff;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.skills .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: slideInDown 1.5s ease-in-out;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.skills-list li {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    background: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    animation: bounceIn 1.5s ease-in-out;
+}
+
+.skills-list li:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    background: #00d1ff;
+    color: #fff;
+}
+
+/* Animations */
+@keyframes slideInDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, hsl(0, 3%, 22%), #676a6a); /* Same gradient as the hero section */
+    color: #000000;
+    animation: slideDown 1s ease-in-out; /* Slide-down animation */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    color: #fff3f3;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #191a1b;
+}
+
+/* Slide-down Animation */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
